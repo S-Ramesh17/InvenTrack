@@ -4,7 +4,7 @@ A full-stack MERN web application for managing inventory, products, warehouses, 
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -18,7 +18,7 @@ A full-stack MERN web application for managing inventory, products, warehouses, 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 inventory-management/
@@ -84,7 +84,7 @@ inventory-management/
 
 ---
 
-## 🔐 Default Users
+## Default Users
 
 | Role | Email | Password |
 |---|---|---|
@@ -95,7 +95,7 @@ These are auto-created on server startup if they don't exist.
 
 ---
 
-## 👤 User Roles
+## User Roles
 
 ### Admin
 - Login, manage products (add/edit/delete)
@@ -111,7 +111,7 @@ These are auto-created on server startup if they don't exist.
 
 ---
 
-## 🤖 AI Features
+## AI Features
 
 ### Rule-Based (No External API)
 | Stock Condition | Status |
@@ -129,7 +129,7 @@ These are auto-created on server startup if they don't exist.
 **Fast Moving:** Monthly Sales > 100 = Fast Moving Product
 
 ### Gemini AI Insights
-Click "🤖 AI Insight" on any product to get:
+Click "AI Insight" on any product to get:
 1. Inventory Health assessment
 2. Risk Level (Low/Medium/High/Critical)
 3. Suggested Reorder Quantity
@@ -137,12 +137,7 @@ Click "🤖 AI Insight" on any product to get:
 
 ---
 
-## 🛠️ Local Setup
-
-### Prerequisites
-- Node.js v18+
-- MongoDB Atlas account
-- Google Gemini API key (optional, for AI insights)
+## Local Setup
 
 ### 1. Clone the repository
 ```bash
@@ -191,25 +186,6 @@ Visit: `http://localhost:3000`
 
 ---
 
-## 🌐 API Endpoints
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | /api/auth/register | Public | Register staff |
-| POST | /api/auth/login | Public | Login |
-| GET | /api/products | Auth | Get all products |
-| POST | /api/products | Admin | Create product |
-| PUT | /api/products/:id | Admin | Update product |
-| DELETE | /api/products/:id | Admin | Delete product |
-| POST | /api/inventory/stock-in | Auth | Stock In |
-| POST | /api/inventory/stock-out | Auth | Stock Out |
-| GET | /api/reports/movements | Admin | Stock movement history |
-| GET | /api/reports/summary | Auth | Dashboard summary |
-| GET | /api/ai/recommendations | Auth | Rule-based AI recs |
-| GET | /api/ai/product-insight/:id | Auth | Gemini AI insight |
-
----
-
 ## 📦 Deployment
 
 ### Backend → Render
@@ -234,49 +210,3 @@ Visit: `http://localhost:3000`
 5. Add Environment Variables:
    - `REACT_APP_API_URL` = your Render backend URL (e.g., `https://your-app.onrender.com`)
 6. Deploy!
-
----
-
-## 📤 GitHub Push Instructions
-
-```bash
-# Initialize git (if not already done)
-git init
-
-# Add all files
-git add .
-
-# Commit
-git commit -m "Initial commit: AI-Powered Inventory Management Platform"
-
-# Add remote
-git remote add origin https://github.com/yourusername/inventory-management.git
-
-# Push
-git push -u origin main
-```
-
----
-
-## 📱 Responsive Design
-
-- **Desktop**: Fixed sidebar, multi-column dashboard
-- **Tablet**: Condensed sidebar, 2-col cards
-- **Mobile**: Hamburger menu, slide-in sidebar, 1-col cards
-
----
-
-## 🧠 How Authentication Works
-
-Since we avoid JWT:
-1. User logs in → server validates credentials → returns user object
-2. Frontend stores user in `localStorage`
-3. On each API request, user's `_id`, `role`, and `name` are sent as custom headers (`x-user-id`, `x-user-role`, `x-user-name`)
-4. Backend middleware reads these headers to authorize requests
-
----
-
-## 📄 License
-
-MIT License — free to use for educational and commercial purposes.
-# InvenTrack
