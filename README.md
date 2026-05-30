@@ -1,4 +1,4 @@
-# 🏭 InvenTrack — AI-Powered Smart Inventory & Warehouse Management Platform
+# InvenTrack — AI-Powered Smart Inventory & Warehouse Management Platform
 
 A full-stack MERN web application for managing inventory, products, warehouses, and stock movements — with rule-based AI recommendations and Google Gemini AI insights.
 
